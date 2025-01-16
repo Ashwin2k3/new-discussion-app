@@ -35,7 +35,7 @@ const Chat = ({ senderId, recipientId }) => {
     <div>
       <h3>Chat</h3>
       <div style={{ height: '300px', overflowY: 'scroll', border: '1px solid #ccc' }}>
-        {messages.map((msg, index) => (
+        {messages?.map((msg, index) => (
           <div key={index}>
             <strong>{msg.sender}</strong>: {msg.message}
           </div>
