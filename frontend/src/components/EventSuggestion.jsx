@@ -35,7 +35,7 @@ const EventSuggestion = ({ studentId }) => {
 
       <div>
         <h4>Suggestions</h4>
-        {suggestions.map((event) => (
+        {suggestions?.map((event) => (
           <div key={event._id}>
             <strong>Suggestion:</strong> {event.suggestion} | <strong>Status:</strong>{' '}
             {event.status}
