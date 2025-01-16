@@ -44,7 +44,7 @@ io.on('connection', (socket) => {
 
 // routes
 
-app.use("/api/messages", authRouter);
+app.use("/api/auth", authRouter);
 app.use("/api/messages", messageRouter)
 
 server.listen(PORT, () => {

@@ -8,7 +8,7 @@ router.post('/send', protect, authorize('student', 'mentor'), async (req, res) =
   try {
     const { sender, recipient, message } = req.body;
 
-    console.log(sender, recipient, message);
+    // console.log(sender, recipient, message);
 
 
 
