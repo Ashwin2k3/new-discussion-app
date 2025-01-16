@@ -20,6 +20,7 @@ const Chat = ({ senderId, recipientId }) => {
 
   const fetchMessages = async () => {
     const { data } = await getMessages(senderId, recipientId);
+
     setMessages(data);
   };
 
