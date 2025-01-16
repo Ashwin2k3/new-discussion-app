@@ -4,9 +4,12 @@ import http from 'http';
 import { Server } from 'socket.io';
 import dotenv from 'dotenv';
 import cors from 'cors';
+
 import routes from './routes/index.js';
 import authRouter from "./routes/auth.js";
-import messageRouter from "./routes/messages.js"
+import messageRouter from "./routes/messages.js";
+import eventRouter from "./routes/events.js";
+import queryRouter from "./routes/queries.js";
 
 dotenv.config();
 
@@ -46,6 +49,9 @@ io.on('connection', (socket) => {
 
 app.use("/api/auth", authRouter);
 app.use("/api/messages", messageRouter)
+app.use("/api/events", eventRouter);
+app.use("/api/queries", queryRouter);
+
 
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
